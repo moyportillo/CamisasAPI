@@ -1,0 +1,12 @@
+var docs = [];
+var modas = ["polo", "formal", "rebelde", "casual"];
+for (var i = 0; i<100; i++){
+   var doc = {
+   	moda: `Moda ${i+1}`,
+    tipo: modas[Math.floor(Math.random()*4)],
+    precio: Math.round(Math.random() * 100, 2),
+    ventas: Math.ceil(Math.random() * 100)
+   }
+   docs.push(doc);
+}
+db.camisas.insert(docs);

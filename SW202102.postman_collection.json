@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "2fee0383-e4b9-485b-bb4a-a5feff30b0d7",
+		"name": "SW202102",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Camisas",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/camisas/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"camisas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "moda",
+									"value": "Polo",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "23",
+									"type": "text"
+								},
+								{
+									"key": "venta",
+									"value": "12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/api/camisas/new",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"camisas",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{HOST}}/api/camisas/byid/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"camisas",
+								"byid",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60d21a17fc0a4556b030c03a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Tipo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/camisas/bytipo/:tipo",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"camisas",
+								"bytipo",
+								":tipo"
+							],
+							"variable": [
+								{
+									"key": "tipo",
+									"value": "polo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Ventas Mayores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/camisas/byventas/mayor/:ventas",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"camisas",
+								"byventas",
+								"mayor",
+								":ventas"
+							],
+							"variable": [
+								{
+									"key": "ventas",
+									"value": "95"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Ventas Menores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/camisas/byventas/menor/:ventas",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"camisas",
+								"byventas",
+								"menor",
+								":ventas"
+							],
+							"variable": [
+								{
+									"key": "ventas",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Ventas Range",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/camisas/byventas/range/:lower/:upper/:incEndings",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"camisas",
+								"byventas",
+								"range",
+								":lower",
+								":upper",
+								":incEndings"
+							],
+							"variable": [
+								{
+									"key": "lower",
+									"value": "20"
+								},
+								{
+									"key": "upper",
+									"value": "30"
+								},
+								{
+									"key": "incEndings",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST",
+			"value": "http://localhost:3000"
+		}
+	]
+}
